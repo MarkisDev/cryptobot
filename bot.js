@@ -33,6 +33,14 @@ client.on('interactionCreate', async interaction =>
                     let inr = usd * 75.40;
                     await interaction.channel.send(`The value in INR is ${String(inr)} and USD is ${String(usd)}`);
                     // DM USER
+                    if (data.percent_change_1h > 2)
+                    {
+                        await interaction.user.send('BTC Value increased!')
+                    }
+                    else if (data.percent_change_1h < 10)
+                    {
+                        await interaction.user.send('BTC Value decreased!')
+                    }
                 })
                 .catch(err =>
                 {
@@ -42,6 +50,10 @@ client.on('interactionCreate', async interaction =>
         // Setting Interval to keep sending the details
         setInterval(makeRequest, 30000);
 
+    }
+    else if (commandName === 'ping')
+    {
+        interaction.reply('pong');
     }
 });
 
