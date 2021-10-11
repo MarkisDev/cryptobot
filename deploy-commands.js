@@ -4,7 +4,7 @@ const { Routes } = require('discord-api-types/v9');
 const { clientId, guildId, token } = require('./config.json');
 
 const commands = [
-    new SlashCommandBuilder().setName('start').setDescription('Starts monitoring BTC value!'),
+    new SlashCommandBuilder().setName('ping').setDescription('pong'),
 ]
     .map(command => command.toJSON());
 
