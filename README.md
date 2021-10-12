@@ -1,1 +1,3 @@
-This bot enables the user to get notified when the bitcoin pirce changes by 30%. The user gets notified to sell bitcoin when the price goes up by 30% and to buy bitcoin when the price goes down by 30%.
+# What is this?
+
+A simple discord bot that works with discord.js to send information about BTC every 5 minutes uisng coinmarketcap's API!
